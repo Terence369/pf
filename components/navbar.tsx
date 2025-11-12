@@ -86,22 +86,22 @@ export function Navbar() {
               {/* Services Dropdown */}
               <li className="relative group">
                 <div
-                  className={`flex items-center gap-1.5 transition-all duration-300 relative pb-1 ${
+                  className={`flex items-center gap-1.5 transition-all duration-300 relative pb-2 ${
                     isServicesActive
-                      ? "text-white after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-white"
-                      : "text-white/80 hover:text-white after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-white hover:after:w-full after:transition-all after:duration-300"
+                      ? "text-foreground after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-gradient-to-r after:from-secondary after:to-accent after:rounded-full"
+                      : "text-foreground/70 hover:text-foreground after:absolute after:bottom-0 after:left-0 after:w-0 after:h-1 after:bg-gradient-to-r after:from-secondary after:to-accent after:rounded-full hover:after:w-full after:transition-all after:duration-300"
                   }`}
                 >
                   <span>Services</span>
                   <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
                 </div>
-                <div className="absolute left-0 mt-4 w-56 rounded-xl backdrop-blur-md bg-[rgba(44,62,80,0.9)] border border-white/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-3 shadow-2xl">
+                <div className="absolute left-0 mt-4 w-56 rounded-2xl glass-morphism opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-3 shadow-2xl">
                   {services.map((service) => (
                     <Link
                       key={service.href}
                       href={service.href}
                       prefetch={false}
-                      className="block px-5 py-2.5 text-white/80 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm font-medium"
+                      className="block px-5 py-2.5 text-foreground/70 hover:text-foreground hover:bg-secondary/10 transition-all duration-200 text-sm font-medium"
                     >
                       {service.name}
                     </Link>
