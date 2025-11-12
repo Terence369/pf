@@ -152,15 +152,18 @@ export function Navbar() {
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden sm:inline-block navbar-cta-wrapper">
-            <HoverButton className="px-2 py-1 bg-transparent border-none text-white" onClick={() => window.location.href = '/contact'}>
+          <div className="hidden sm:inline-block">
+            <button
+              onClick={() => window.location.href = '/contact'}
+              className="px-6 py-2.5 rounded-full font-semibold text-sm text-white transition-all duration-300 bg-gradient-to-r from-secondary to-accent hover:shadow-lg hover:shadow-secondary/40 hover:-translate-y-1"
+            >
               Let&apos;s work together
-            </HoverButton>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white transition-opacity duration-300 hover:opacity-70"
+            className="md:hidden text-foreground transition-opacity duration-300 hover:opacity-70"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
