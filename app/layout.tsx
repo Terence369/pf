@@ -1,21 +1,21 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Vidaloka, Raleway } from "next/font/google"
+import { Poppins, Playfair_Display } from "next/font/google"
 import Script from "next/script"
 import { Analytics } from "@vercel/analytics/next"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import "./globals.css"
 
-const vidaloka = Vidaloka({
-  weight: ["400"],
-  subsets: ["latin"],
-  variable: "--font-vidaloka",
-})
-
-const raleway = Raleway({
+const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
-  variable: "--font-raleway",
+  variable: "--font-poppins",
+})
+
+const playfair = Playfair_Display({
+  weight: ["400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+  variable: "--font-playfair",
 })
 
 export const metadata: Metadata = {
