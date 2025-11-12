@@ -393,14 +393,14 @@
     letter-spacing: 0.3px;
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     background: transparent;
-    border: 2px solid rgba(102, 126, 234, 0.5);
-    color: #667EEA;
+    border: 2px solid rgba(113, 54, 0, 0.5);
+    color: #713600;
     cursor: pointer;
   }
 
   .btn-premium-outline:hover {
-    background: rgba(102, 126, 234, 0.1);
-    border-color: #667EEA;
+    background: rgba(192, 88, 0, 0.1);
+    border-color: #C05800;
     transform: translateY(-2px);
   }
 
