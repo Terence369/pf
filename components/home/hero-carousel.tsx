@@ -9,6 +9,14 @@ export function HeroCarousel() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
   useEffect(() => {
+    // Preload images for better performance
+    heroImages.forEach((image) => {
+      const img = new Image()
+      img.src = image
+    })
+  }, [])
+
+  useEffect(() => {
     const timer = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % heroImages.length)
     }, 5000)
