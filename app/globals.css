@@ -4,35 +4,44 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Updated color palette for Pride Eventz - clean white and black theme */
-  --background: #FFFFFF;
-  --foreground: #1A1A1A;
+  /* Premium color palette for Pride Eventz */
+  --background: #FAFBFC;
+  --foreground: #0F1419;
   --card: #FFFFFF;
-  --card-foreground: #1A1A1A;
+  --card-foreground: #0F1419;
   --popover: #FFFFFF;
-  --popover-foreground: #1A1A1A;
+  --popover-foreground: #0F1419;
 
-  /* Black and gray accent colors */
-  --primary: #1A1A1A; /* Primary Black - CTAs */
+  /* Premium primary colors with gradient support */
+  --primary: #0F1419;
   --primary-foreground: #FFFFFF;
-  --secondary: #333333; /* Dark Gray - hover */
+  --secondary: #6366F1; /* Elegant indigo */
   --secondary-foreground: #FFFFFF;
-  --accent: #F5F5F5; /* Light Gray - accents */
-  --accent-foreground: #1A1A1A;
+  --accent: #EC4899; /* Subtle rose accent */
+  --accent-foreground: #FFFFFF;
 
-  --muted: #F9F9F9; /* Very light gray - subtle backgrounds/cards */
-  --muted-foreground: #666666;
-  --destructive: #D32F2F;
+  /* Premium gradient colors */
+  --gradient-start: #667EEA;
+  --gradient-middle: #764BA2;
+  --gradient-end: #F093FB;
+
+  /* Deep blue for premium feel */
+  --deep-blue: #1E293B;
+  --light-purple: #A78BFA;
+
+  --muted: #F1F5F9;
+  --muted-foreground: #64748B;
+  --destructive: #DC2626;
   --destructive-foreground: #FFFFFF;
-  --border: #E5E5E5;
+  --border: #E2E8F0;
   --input: #FFFFFF;
-  --ring: #999999;
-  --chart-1: #1A1A1A;
-  --chart-2: #333333;
-  --chart-3: #666666;
-  --chart-4: #999999;
-  --chart-5: #CCCCCC;
-  --radius: 0.625rem;
+  --ring: #667EEA;
+  --chart-1: #667EEA;
+  --chart-2: #764BA2;
+  --chart-3: #F093FB;
+  --chart-4: #EC4899;
+  --chart-5: #6366F1;
+  --radius: 0.75rem;
   --sidebar: oklch(1 0 0);
   --sidebar-foreground: oklch(0.08 0 0);
   --sidebar-primary: var(--primary);
