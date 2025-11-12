@@ -63,83 +63,30 @@ export function ExpertPlanning() {
           </div>
 
           {/* Right Column - Image Grid */}
-          <div
-            style={{
-              display: "grid",
-              fontWeight: "400",
-              gap: "16px",
-              gridTemplateColumns: "repeat(2, minmax(0px, 1fr))",
-              padding: "241px 2px 0 0",
-            }}
-          >
+          <div className="grid grid-cols-2 gap-4 h-fit">
             <img
               alt="DJ setup"
               loading="lazy"
               src="https://cdn.builder.io/api/v1/image/assets%2F39ae946dc8af40c8b70646f61cd45ef0%2F0f18591e64d74651873c54c06db9c3d7"
-              style={{
-                display: "block",
-                borderRadius: "10px",
-                boxShadow:
-                  "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
-                fontWeight: "400",
-                height: "244px",
-                objectFit: "cover",
-                width: "100%",
-                marginRight: "-2px",
-              }}
+              className="rounded-2xl shadow-xl h-60 object-cover hover:shadow-2xl transition-all duration-300 hover:scale-105"
             />
             <img
               alt="Decorations"
               loading="lazy"
               src="https://cdn.builder.io/api/v1/image/assets%2F39ae946dc8af40c8b70646f61cd45ef0%2F9088b880cfb84b6987b31afac6b38ba2?format=webp"
-              style={{
-                display: "block",
-                borderRadius: "10px",
-                boxShadow:
-                  "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
-                fontWeight: "400",
-                height: "176px",
-                objectFit: "cover",
-                width: "100%",
-                marginLeft: "-2px",
-              }}
+              className="rounded-2xl shadow-xl h-44 object-cover hover:shadow-2xl transition-all duration-300 hover:scale-105"
             />
             <img
               alt="Lighting"
               loading="lazy"
               src="https://cdn.builder.io/api/v1/image/assets%2F39ae946dc8af40c8b70646f61cd45ef0%2F0204cca0c7114c80b24a5817adb9416b"
-              style={{
-                display: "block",
-                borderRadius: "10px",
-                boxShadow:
-                  "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
-                fontWeight: "400",
-                height: "192px",
-                objectFit: "cover",
-                width: "100%",
-              }}
+              className="rounded-2xl shadow-xl h-48 object-cover hover:shadow-2xl transition-all duration-300 hover:scale-105"
             />
             <img
               alt="Atmosphere"
               loading="lazy"
               src="https://cdn.builder.io/api/v1/image/assets%2F39ae946dc8af40c8b70646f61cd45ef0%2Fec6c218f1d534cd2899d6f9dc8afeef3"
-              style={{
-                display: "block",
-                backgroundImage:
-                  'url("https://cdn.builder.io/api/v1/image/assets%2F39ae946dc8af40c8b70646f61cd45ef0%2Fec6c218f1d534cd2899d6f9dc8afeef3")',
-                backgroundPosition: "50% 50%",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-                borderRadius: "10px",
-                boxShadow:
-                  "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
-                fontWeight: "400",
-                height: "273px",
-                objectFit: "cover",
-                width: "100%",
-                paddingBottom: "3px",
-                margin: "-76px 0 19px",
-              }}
+              className="rounded-2xl shadow-xl h-56 object-cover hover:shadow-2xl transition-all duration-300 hover:scale-105"
             />
           </div>
         </div>
