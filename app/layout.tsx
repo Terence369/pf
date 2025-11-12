@@ -31,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning style={{ colorScheme: "light dark" }}>
-      <body className={`${vidaloka.variable} ${raleway.variable} font-sans antialiased`}>
+      <body className={`${poppins.variable} ${playfair.variable} font-sans antialiased`}>
         <Script id="safe-fetch" strategy="beforeInteractive">{`(function(){try{ // preserve original fetch
   var originalFetch = window.fetch;
   if(!originalFetch) return;
