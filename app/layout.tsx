@@ -1,12 +1,22 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Vidaloka, Raleway } from "next/font/google"
 import Script from "next/script"
 import { Analytics } from "@vercel/analytics/next"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"] })
+const vidaloka = Vidaloka({
+  weight: ["400"],
+  subsets: ["latin"],
+  variable: "--font-vidaloka",
+})
+
+const raleway = Raleway({
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+  variable: "--font-raleway",
+})
 
 export const metadata: Metadata = {
   title: "Pride Eventz - Luxury Event Management",
