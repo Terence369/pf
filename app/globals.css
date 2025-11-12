@@ -424,6 +424,31 @@
     animation: bg-zoom-slow 4s ease-out both;
   }
 
+  /* Premium background gradient */
+  .bg-premium-gradient {
+    background: linear-gradient(135deg, #FAFBFC 0%, #F1F5F9 50%, #E0E7FF 100%);
+  }
+
+  .bg-premium-gradient-dark {
+    background: linear-gradient(135deg, #0D1117 0%, #161B22 50%, #0D1117 100%);
+  }
+
+  /* Subtle shimmer effect */
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+
+  .shimmer {
+    background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0.1) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+
   @keyframes soft-float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
