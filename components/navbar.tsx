@@ -35,10 +35,10 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-md border-b ${
+      className={`fixed top-0 w-full z-50 transition-all duration-400 border-b ${
         isScrolled
-          ? "bg-[rgba(44,62,80,0.70)] border-white/10 shadow-lg"
-          : "bg-[rgba(44,62,80,0.60)] border-white/10"
+          ? "glass-morphism-dark shadow-2xl"
+          : "bg-white/70 backdrop-blur-lg border-white/30"
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
