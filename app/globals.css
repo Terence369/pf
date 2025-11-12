@@ -449,6 +449,33 @@
     animation: shimmer 2s infinite;
   }
 
+  /* Performance optimizations */
+  img {
+    contain: layout style paint;
+  }
+
+  /* Hardware acceleration for animations */
+  .animate-fade-in-up,
+  .animate-float,
+  .premium-card:hover,
+  button:hover {
+    transform: translate3d(0, 0, 0);
+  }
+
+  /* Optimize transitions */
+  * {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
   @keyframes soft-float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
