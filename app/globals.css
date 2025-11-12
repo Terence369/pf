@@ -324,6 +324,98 @@
     transform: scale(1.02);
   }
 
+  /* Premium card styles */
+  .premium-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(229, 231, 235, 0.8);
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .premium-card:hover {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(102, 126, 234, 0.3);
+    box-shadow: 0 16px 40px rgba(102, 126, 234, 0.12), 0 0 0 1px rgba(102, 126, 234, 0.1);
+    transform: translateY(-8px);
+  }
+
+  /* Floating animation for cards */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  /* Gradient text effect */
+  .gradient-text {
+    background: linear-gradient(135deg, #667EEA 0%, #764BA2 50%, #F093FB 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Premium button styles */
+  .btn-premium {
+    padding: 0.875rem 2rem;
+    border-radius: 1.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+  }
+
+  .btn-premium:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.3);
+  }
+
+  .btn-premium-outline {
+    padding: 0.875rem 2rem;
+    border-radius: 1.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    background: transparent;
+    border: 2px solid rgba(102, 126, 234, 0.5);
+    color: #667EEA;
+    cursor: pointer;
+  }
+
+  .btn-premium-outline:hover {
+    background: rgba(102, 126, 234, 0.1);
+    border-color: #667EEA;
+    transform: translateY(-2px);
+  }
+
+  /* Section spacing for premium feel */
+  .section-premium {
+    padding: 6rem 2rem;
+    position: relative;
+  }
+
+  @media (max-width: 768px) {
+    .section-premium {
+      padding: 4rem 1.5rem;
+    }
+  }
+
   @keyframes bg-zoom-slow {
     from { transform: scale(1.1); }
     to { transform: scale(1); }
