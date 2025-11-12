@@ -113,10 +113,10 @@ export function Navbar() {
                 <Link
                   href="/gallery"
                   prefetch={false}
-                  className={`transition-all duration-300 relative pb-1 ${
+                  className={`transition-all duration-300 relative pb-2 ${
                     isActive("/gallery")
-                      ? "text-white after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-white"
-                      : "text-white/80 hover:text-white after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-white hover:after:w-full after:transition-all after:duration-300"
+                      ? "text-foreground after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-gradient-to-r after:from-secondary after:to-accent after:rounded-full"
+                      : "text-foreground/70 hover:text-foreground after:absolute after:bottom-0 after:left-0 after:w-0 after:h-1 after:bg-gradient-to-r after:from-secondary after:to-accent after:rounded-full hover:after:w-full after:transition-all after:duration-300"
                   }`}
                 >
                   Portfolio
@@ -126,10 +126,10 @@ export function Navbar() {
                 <Link
                   href="/clients"
                   prefetch={false}
-                  className={`transition-all duration-300 relative pb-1 ${
+                  className={`transition-all duration-300 relative pb-2 ${
                     isActive("/clients")
-                      ? "text-white after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-white"
-                      : "text-white/80 hover:text-white after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-white hover:after:w-full after:transition-all after:duration-300"
+                      ? "text-foreground after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-gradient-to-r after:from-secondary after:to-accent after:rounded-full"
+                      : "text-foreground/70 hover:text-foreground after:absolute after:bottom-0 after:left-0 after:w-0 after:h-1 after:bg-gradient-to-r after:from-secondary after:to-accent after:rounded-full hover:after:w-full after:transition-all after:duration-300"
                   }`}
                 >
                   Our Clients
@@ -139,10 +139,10 @@ export function Navbar() {
                 <Link
                   href="/contact"
                   prefetch={false}
-                  className={`transition-all duration-300 relative pb-1 ${
+                  className={`transition-all duration-300 relative pb-2 ${
                     isActive("/contact")
-                      ? "text-white after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-white"
-                      : "text-white/80 hover:text-white after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-white hover:after:w-full after:transition-all after:duration-300"
+                      ? "text-foreground after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-gradient-to-r after:from-secondary after:to-accent after:rounded-full"
+                      : "text-foreground/70 hover:text-foreground after:absolute after:bottom-0 after:left-0 after:w-0 after:h-1 after:bg-gradient-to-r after:from-secondary after:to-accent after:rounded-full hover:after:w-full after:transition-all after:duration-300"
                   }`}
                 >
                   Contact
