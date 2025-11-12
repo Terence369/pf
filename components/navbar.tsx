@@ -63,15 +63,15 @@ export function Navbar() {
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex items-center" aria-label="Primary">
-            <ul className="flex items-center gap-8 text-[14px] font-medium text-foreground/70">
+            <ul className="flex items-center gap-8 text-[14px] font-semibold text-primary/70">
               <li>
                 <Link
                   href="/"
                   prefetch={false}
                   className={`transition-all duration-300 relative pb-2 ${
                     isActive("/")
-                      ? "text-foreground after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-gradient-to-r after:from-secondary after:to-accent after:rounded-full"
-                      : "hover:text-foreground after:absolute after:bottom-0 after:left-0 after:w-0 after:h-1 after:bg-gradient-to-r after:from-secondary after:to-accent after:rounded-full hover:after:w-full after:transition-all after:duration-300"
+                      ? "text-primary after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-gradient-to-r after:from-secondary after:to-accent after:rounded-full"
+                      : "hover:text-primary after:absolute after:bottom-0 after:left-0 after:w-0 after:h-1 after:bg-gradient-to-r after:from-secondary after:to-accent after:rounded-full hover:after:w-full after:transition-all after:duration-300"
                   }`}
                 >
                   Home
@@ -83,8 +83,8 @@ export function Navbar() {
                   prefetch={false}
                   className={`transition-all duration-300 relative pb-2 ${
                     isActive("/about")
-                      ? "text-foreground after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-gradient-to-r after:from-secondary after:to-accent after:rounded-full"
-                      : "text-foreground/70 hover:text-foreground after:absolute after:bottom-0 after:left-0 after:w-0 after:h-1 after:bg-gradient-to-r after:from-secondary after:to-accent after:rounded-full hover:after:w-full after:transition-all after:duration-300"
+                      ? "text-primary after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-gradient-to-r after:from-secondary after:to-accent after:rounded-full"
+                      : "text-primary/70 hover:text-primary after:absolute after:bottom-0 after:left-0 after:w-0 after:h-1 after:bg-gradient-to-r after:from-secondary after:to-accent after:rounded-full hover:after:w-full after:transition-all after:duration-300"
                   }`}
                 >
                   About
