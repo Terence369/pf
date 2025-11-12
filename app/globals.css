@@ -357,7 +357,7 @@
 
   /* Gradient text effect */
   .gradient-text {
-    background: linear-gradient(135deg, #667EEA 0%, #764BA2 50%, #F093FB 100%);
+    background: linear-gradient(135deg, #713600 0%, #C05800 50%, #FDBF33 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
