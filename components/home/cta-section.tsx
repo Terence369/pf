@@ -33,7 +33,7 @@ export function CTASection() {
         </p>
         <button
           onClick={() => window.location.href = '/contact'}
-          className="mt-10 px-8 py-3.5 rounded-full bg-gradient-to-r from-secondary to-accent text-white font-semibold hover:shadow-lg hover:shadow-secondary/40 hover:-translate-y-1 transition-all duration-300"
+          className="mt-10 px-8 py-3.5 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-bold hover:shadow-lg hover:shadow-primary/40 hover:-translate-y-1 transition-all duration-300"
         >
           Get Started Today
         </button>
