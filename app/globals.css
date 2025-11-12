@@ -426,11 +426,11 @@
 
   /* Premium background gradient */
   .bg-premium-gradient {
-    background: linear-gradient(135deg, #FAFBFC 0%, #F1F5F9 50%, #E0E7FF 100%);
+    background: linear-gradient(135deg, #FDFBD4 0%, #F5EFE0 50%, #FDFBD4 100%);
   }
 
   .bg-premium-gradient-dark {
-    background: linear-gradient(135deg, #0D1117 0%, #161B22 50%, #0D1117 100%);
+    background: linear-gradient(135deg, #38240D 0%, #4A3220 50%, #38240D 100%);
   }
 
   /* Subtle shimmer effect */
