@@ -373,16 +373,16 @@
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+    background: linear-gradient(135deg, #713600 0%, #C05800 100%);
     color: white;
     border: none;
     cursor: pointer;
-    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+    box-shadow: 0 10px 30px rgba(113, 54, 0, 0.2);
   }
 
   .btn-premium:hover {
     transform: translateY(-2px);
-    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 15px 40px rgba(192, 88, 0, 0.3);
   }
 
   .btn-premium-outline {
