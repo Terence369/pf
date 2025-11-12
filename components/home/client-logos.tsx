@@ -23,9 +23,9 @@ export function ClientLogos() {
   ]
 
   return (
-    <section className="py-20 px-4" style={{ backgroundColor: 'rgba(255,255,255,1)' }}>
+    <section className="py-24 lg:py-32 px-4 bg-premium-gradient">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-foreground text-center">Impactful Clients & Companies</h2>
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground text-center mb-12 lg:mb-16">Impactful Clients & Companies</h2>
         <CustomersSection customers={customers} className="pt-8" />
       </div>
     </section>
