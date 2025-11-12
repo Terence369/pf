@@ -13,59 +13,64 @@ export function Footer() {
   }, [])
 
   return (
-    <footer className="relative h-fit rounded-3xl overflow-hidden m-8" style={{ background: '#FFFFFF', borderTop: '1px solid #E5E5E5' }}>
-      <div className="max-w-7xl mx-auto p-14 z-40 relative">
+    <footer className="relative h-fit rounded-3xl overflow-hidden m-6 lg:m-8 glass-morphism">
+      <div className="max-w-7xl mx-auto p-12 lg:p-16 z-40 relative">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8 lg:gap-16 pb-12">
           {/* Column 1 - Company Info */}
           <div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 mb-6">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F6241002a28724d6b8f1149d981f5257e%2F4220e3e82a1f46b3b96e9daf8656a8a6?format=webp&width=800"
                 alt="Pride Eventz Logo"
                 className="h-10 w-10 object-contain"
               />
-              <span className="font-semibold text-lg text-[#1F1F1F]">Pride Eventz</span>
+              <span className="font-serif text-lg font-semibold text-foreground">Pride Eventz</span>
             </div>
-            <p className="text-[#2D2D2D] mt-4 max-w-[280px] text-[14px] leading-[1.6]">
+            <p className="text-foreground/70 mt-4 max-w-[280px] text-[14px] leading-relaxed">
               We specialize in creating customized solutions that align with your vision and budget
             </p>
-            <div className="mt-4 space-y-2 text-[14px]">
-              <a href="tel:+919846596349" className="inline-flex items-center gap-2 text-[#2D2D2D] hover:text-[#1F1F1F] transition-colors">
-                <Phone className="w-4 h-4" /> Tel no.: +91 9846596349
+            <div className="mt-6 space-y-3 text-[14px]">
+              <a href="tel:+919846596349" className="inline-flex items-center gap-2 text-foreground/70 hover:text-secondary transition-colors duration-300 group">
+                <Phone className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" /> Tel no.: +91 9846596349
               </a>
-              <a href="mailto:info@prideeventz.in" className="inline-flex items-center gap-2 text-[#2D2D2D] hover:text-[#1F1F1F] transition-colors">
-                <Mail className="w-4 h-4" /> Email: info@prideeventz.in
+              <a href="mailto:info@prideeventz.in" className="inline-flex items-center gap-2 text-foreground/70 hover:text-secondary transition-colors duration-300 group">
+                <Mail className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" /> Email: info@prideeventz.in
               </a>
             </div>
           </div>
 
           {/* Column 2 - Company */}
           <div>
-            <h3 className="font-semibold text-[#1F1F1F] mb-4 text-[16px]">Company</h3>
-            <ul className="space-y-2 text-[14px]">
+            <h3 className="font-semibold text-foreground mb-6 text-[16px] tracking-tight">Company</h3>
+            <ul className="space-y-3 text-[14px]">
               <li>
-                <Link href="/about" className="text-[#2D2D2D] hover:text-[#1F1F1F] transition-colors">
+                <Link href="/about" className="text-foreground/70 hover:text-secondary transition-all duration-300 relative inline-block group">
                   About
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary group-hover:w-full transition-all duration-300"></span>
                 </Link>
               </li>
               <li>
-                <Link href="/services/corporate" className="text-[#2D2D2D] hover:text-[#1F1F1F] transition-colors">
+                <Link href="/services/corporate" className="text-foreground/70 hover:text-secondary transition-all duration-300 relative inline-block group">
                   Services
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary group-hover:w-full transition-all duration-300"></span>
                 </Link>
               </li>
               <li>
-                <Link href="/gallery" className="text-[#2D2D2D] hover:text-[#1F1F1F] transition-colors">
+                <Link href="/gallery" className="text-foreground/70 hover:text-secondary transition-all duration-300 relative inline-block group">
                   Portfolio
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary group-hover:w-full transition-all duration-300"></span>
                 </Link>
               </li>
               <li>
-                <Link href="/clients" className="text-[#2D2D2D] hover:text-[#1F1F1F] transition-colors">
+                <Link href="/clients" className="text-foreground/70 hover:text-secondary transition-all duration-300 relative inline-block group">
                   Our Clients
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary group-hover:w-full transition-all duration-300"></span>
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-[#2D2D2D] hover:text-[#1F1F1F] transition-colors">
+                <Link href="/contact" className="text-foreground/70 hover:text-secondary transition-all duration-300 relative inline-block group">
                   Contact
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary group-hover:w-full transition-all duration-300"></span>
                 </Link>
               </li>
             </ul>
@@ -73,21 +78,21 @@ export function Footer() {
 
           {/* Column 3 - Social Media */}
           <div>
-            <h3 className="font-semibold text-[#1F1F1F] mb-4 text-[16px]">Social Media</h3>
-            <ul className="space-y-2 text-[14px]">
+            <h3 className="font-semibold text-foreground mb-6 text-[16px] tracking-tight">Social Media</h3>
+            <ul className="space-y-3 text-[14px]">
               <li>
-                <a href="#" className="inline-flex items-center gap-2 text-[#2D2D2D] hover:text-[#1F1F1F] transition-colors">
-                  <Facebook className="w-4 h-4" /> Facebook
+                <a href="#" className="inline-flex items-center gap-2 text-foreground/70 hover:text-secondary transition-all duration-300 group">
+                  <Facebook className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" /> Facebook
                 </a>
               </li>
               <li>
-                <a href="#" className="inline-flex items-center gap-2 text-[#2D2D2D] hover:text-[#1F1F1F] transition-colors">
-                  <Youtube className="w-4 h-4" /> Youtube
+                <a href="#" className="inline-flex items-center gap-2 text-foreground/70 hover:text-secondary transition-all duration-300 group">
+                  <Youtube className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" /> Youtube
                 </a>
               </li>
               <li>
-                <a href="#" className="inline-flex items-center gap-2 text-[#2D2D2D] hover:text-[#1F1F1F] transition-colors">
-                  <Instagram className="w-4 h-4" /> Instagram
+                <a href="#" className="inline-flex items-center gap-2 text-foreground/70 hover:text-secondary transition-all duration-300 group">
+                  <Instagram className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" /> Instagram
                 </a>
               </li>
             </ul>
@@ -95,41 +100,43 @@ export function Footer() {
 
           {/* Column 4 - Legal & Press */}
           <div>
-            <h3 className="font-semibold text-[#1F1F1F] mb-4 text-[16px]">Legal &amp; Press</h3>
-            <ul className="space-y-2 text-[14px]">
+            <h3 className="font-semibold text-foreground mb-6 text-[16px] tracking-tight">Legal &amp; Press</h3>
+            <ul className="space-y-3 text-[14px]">
               <li>
-                <Link href="#" className="text-[#2D2D2D] hover:text-[#1F1F1F] transition-colors">
+                <Link href="#" className="text-foreground/70 hover:text-secondary transition-all duration-300 relative inline-block group">
                   Privacy Policy
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary group-hover:w-full transition-all duration-300"></span>
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-[#2D2D2D] hover:text-[#1F1F1F] transition-colors">
+                <Link href="#" className="text-foreground/70 hover:text-secondary transition-all duration-300 relative inline-block group">
                   Terms &amp; Conditions
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary group-hover:w-full transition-all duration-300"></span>
                 </Link>
               </li>
             </ul>
           </div>
         </div>
 
-        <hr className="border-t my-8" style={{ borderTopColor: '#E5E5E5' }} />
+        <div className="border-t border-foreground/10 my-8 lg:my-12"></div>
 
         {/* Footer bottom */}
         <div className="flex flex-col md:flex-row justify-between items-center text-sm space-y-4 md:space-y-0">
           {/* Social icons */}
-          <div className="flex space-x-6 text-[#2D2D2D]">
-            <a href="#" aria-label="Facebook" className="hover:text-[#1F1F1F] transition-colors">
+          <div className="flex space-x-6 text-foreground/70">
+            <a href="#" aria-label="Facebook" className="hover:text-secondary hover:scale-110 transition-all duration-300">
               <Facebook size={20} />
             </a>
-            <a href="#" aria-label="Youtube" className="hover:text-[#1F1F1F] transition-colors">
+            <a href="#" aria-label="Youtube" className="hover:text-secondary hover:scale-110 transition-all duration-300">
               <Youtube size={20} />
             </a>
-            <a href="#" aria-label="Instagram" className="hover:text-[#1F1F1F] transition-colors">
+            <a href="#" aria-label="Instagram" className="hover:text-secondary hover:scale-110 transition-all duration-300">
               <Instagram size={20} />
             </a>
           </div>
 
           {/* Copyright */}
-          <p className="text-center md:text-left text-[#2D2D2D]">
+          <p className="text-center md:text-left text-foreground/70">
             &copy; {year} Pride Eventz. All rights reserved.
           </p>
         </div>
