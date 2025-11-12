@@ -30,8 +30,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} font-sans antialiased`}>
+    <html lang="en" suppressHydrationWarning style={{ colorScheme: "light dark" }}>
+      <body className={`${vidaloka.variable} ${raleway.variable} font-sans antialiased`}>
         <Script id="safe-fetch" strategy="beforeInteractive">{`(function(){try{ // preserve original fetch
   var originalFetch = window.fetch;
   if(!originalFetch) return;
