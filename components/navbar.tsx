@@ -163,7 +163,7 @@ export function Navbar() {
           <div className="hidden sm:inline-block">
             <button
               onClick={() => window.location.href = '/contact'}
-              className="px-6 py-2.5 rounded-full font-semibold text-sm text-white transition-all duration-300 bg-gradient-to-r from-secondary to-accent hover:shadow-lg hover:shadow-secondary/40 hover:-translate-y-1"
+              className="px-6 py-2.5 rounded-full font-bold text-sm text-white transition-all duration-300 bg-gradient-to-r from-primary to-secondary hover:shadow-lg hover:shadow-primary/40 hover:-translate-y-1"
             >
               Let&apos;s work together
             </button>
