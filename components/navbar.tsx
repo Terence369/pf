@@ -96,8 +96,8 @@ export function Navbar() {
                 <div
                   className={`flex items-center gap-1.5 transition-all duration-300 relative pb-2 ${
                     isServicesActive
-                      ? "text-foreground after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-gradient-to-r after:from-secondary after:to-accent after:rounded-full"
-                      : "text-foreground/70 hover:text-foreground after:absolute after:bottom-0 after:left-0 after:w-0 after:h-1 after:bg-gradient-to-r after:from-secondary after:to-accent after:rounded-full hover:after:w-full after:transition-all after:duration-300"
+                      ? "text-primary after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-gradient-to-r after:from-secondary after:to-accent after:rounded-full"
+                      : "text-primary/70 hover:text-primary after:absolute after:bottom-0 after:left-0 after:w-0 after:h-1 after:bg-gradient-to-r after:from-secondary after:to-accent after:rounded-full hover:after:w-full after:transition-all after:duration-300"
                   }`}
                 >
                   <span>Services</span>
@@ -109,7 +109,7 @@ export function Navbar() {
                       key={service.href}
                       href={service.href}
                       prefetch={false}
-                      className="block px-5 py-2.5 text-foreground/70 hover:text-foreground hover:bg-secondary/10 transition-all duration-200 text-sm font-medium"
+                      className="block px-5 py-2.5 text-primary/70 hover:text-primary hover:bg-secondary/10 transition-all duration-200 text-sm font-semibold"
                     >
                       {service.name}
                     </Link>
