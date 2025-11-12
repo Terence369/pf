@@ -27,10 +27,10 @@ export default function Home() {
   }, [])
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-premium-gradient">
       {/* Scroll Progress Bar */}
       <div
-        className="fixed top-0 left-0 h-1 bg-primary z-50 transition-all duration-300"
+        className="fixed top-0 left-0 h-1 z-50 transition-all duration-300 bg-gradient-to-r from-secondary to-accent"
         style={{ width: `${scrollProgress}%` }}
       />
 
