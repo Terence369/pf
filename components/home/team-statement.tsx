@@ -6,23 +6,24 @@ const DynamicScroller = dynamic(() => import("./infinite-image-scroller").then((
 
 export function TeamStatement() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-24 lg:py-32 bg-premium-gradient">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Column - Text */}
           <div>
-            <div className="mb-8">
-              <span className="text-8xl font-bold text-gray-200">01</span>
+            <div className="mb-12">
+              <span className="text-7xl lg:text-8xl font-light text-secondary/30">01</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-8 leading-tight">
               We are a dynamic team turning innovative ideas into reality.
             </h2>
-            <p className="text-gray-600 leading-relaxed mb-6">
+            <p className="text-foreground/70 leading-relaxed mb-8 text-lg">
               Our team of experienced professionals brings creativity, expertise, and passion to every project. We work
               collaboratively to ensure your vision becomes an unforgettable reality.
             </p>
-            <a href="#" className="text-primary font-semibold hover:text-accent transition-colors">
-              Learn More →
+            <a href="/about" className="inline-flex items-center gap-2 text-secondary font-semibold hover:text-accent transition-all duration-300 group">
+              <span>Learn More</span>
+              <span className="inline-block group-hover:translate-x-1 transition-transform duration-300">→</span>
             </a>
           </div>
 
