@@ -180,16 +180,16 @@ export function Navbar() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden pb-4 border-t border-foreground/10 bg-white/70 backdrop-blur-lg">
-            <Link href="/" prefetch={false} className="block px-4 py-3 text-foreground/70 hover:text-foreground hover:bg-secondary/10 transition-colors text-sm font-medium">
+          <div className="md:hidden pb-4 border-t border-primary/10 bg-white/90 backdrop-blur-lg">
+            <Link href="/" prefetch={false} className="block px-4 py-3 text-primary/70 hover:text-primary hover:bg-secondary/10 transition-colors text-sm font-semibold">
               Home
             </Link>
-            <Link href="/about" prefetch={false} className="block px-4 py-3 text-foreground/70 hover:text-foreground hover:bg-secondary/10 transition-colors text-sm font-medium">
+            <Link href="/about" prefetch={false} className="block px-4 py-3 text-primary/70 hover:text-primary hover:bg-secondary/10 transition-colors text-sm font-semibold">
               About
             </Link>
             <button
               onClick={() => setIsServicesOpen(!isServicesOpen)}
-              className="w-full text-left px-4 py-3 text-foreground/70 hover:text-foreground hover:bg-secondary/10 flex items-center justify-between font-medium text-sm transition-colors"
+              className="w-full text-left px-4 py-3 text-primary/70 hover:text-primary hover:bg-secondary/10 flex items-center justify-between font-semibold text-sm transition-colors"
             >
               Services
               <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isServicesOpen ? "rotate-180" : ""}`} />
@@ -200,20 +200,20 @@ export function Navbar() {
                   <Link
                     key={service.href}
                     href={service.href}
-                    className="block px-4 py-2.5 text-sm text-foreground/60 hover:text-foreground hover:bg-secondary/10 transition-colors font-medium"
+                    className="block px-4 py-2.5 text-sm text-primary/60 hover:text-primary hover:bg-secondary/10 transition-colors font-semibold"
                   >
                     {service.name}
                   </Link>
                 ))}
               </div>
             )}
-            <Link href="/gallery" prefetch={false} className="block px-4 py-3 text-foreground/70 hover:text-foreground hover:bg-secondary/10 transition-colors text-sm font-medium">
+            <Link href="/gallery" prefetch={false} className="block px-4 py-3 text-primary/70 hover:text-primary hover:bg-secondary/10 transition-colors text-sm font-semibold">
               Portfolio
             </Link>
-            <Link href="/clients" prefetch={false} className="block px-4 py-3 text-foreground/70 hover:text-foreground hover:bg-secondary/10 transition-colors text-sm font-medium">
+            <Link href="/clients" prefetch={false} className="block px-4 py-3 text-primary/70 hover:text-primary hover:bg-secondary/10 transition-colors text-sm font-semibold">
               Our Clients
             </Link>
-            <Link href="/contact" prefetch={false} className="block px-4 py-3 text-foreground/70 hover:text-foreground hover:bg-secondary/10 transition-colors text-sm font-medium">
+            <Link href="/contact" prefetch={false} className="block px-4 py-3 text-primary/70 hover:text-primary hover:bg-secondary/10 transition-colors text-sm font-semibold">
               Contact
             </Link>
           </div>
