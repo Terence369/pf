@@ -37,9 +37,17 @@ export function Navbar() {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-400 border-b ${
         isScrolled
-          ? "glass-morphism-dark shadow-2xl"
-          : "bg-white/70 backdrop-blur-lg border-white/30"
+          ? "bg-white/90 backdrop-blur-xl border-orange-100/50 shadow-lg"
+          : "bg-white/85 backdrop-blur-xl border-orange-100/40 shadow-md"
       }`}
+      style={{
+        background: isScrolled
+          ? "rgba(255, 255, 255, 0.92)"
+          : "rgba(255, 255, 255, 0.88)",
+        backdropFilter: "blur(25px) saturate(180%)",
+        WebkitBackdropFilter: "blur(25px) saturate(180%)",
+        borderColor: "rgba(192, 88, 0, 0.15)"
+      }}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
