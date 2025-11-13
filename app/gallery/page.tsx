@@ -1,28 +1,51 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import dynamic from "next/dynamic"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { PortfolioHero } from "@/components/portfolio/portfolio-hero"
 import { FilterTabs } from "@/components/portfolio/filter-tabs"
 import { PortfolioGrid } from "@/components/portfolio/portfolio-grid"
-import { LoadMoreSection } from "@/components/portfolio/load-more-section"
-import { CTABanner } from "@/components/portfolio/cta-banner"
-import { RelatedServices } from "@/components/portfolio/related-services"
-import { TestimonialSlider } from "@/components/portfolio/testimonial-slider"
-import { StatsCounter } from "@/components/portfolio/stats-counter"
+
+const LoadMoreSection = dynamic(() => import("@/components/portfolio/load-more-section").then(m => ({ default: m.LoadMoreSection })), {
+  loading: () => <div className="h-40" />,
+})
+
+const CTABanner = dynamic(() => import("@/components/portfolio/cta-banner").then(m => ({ default: m.CTABanner })), {
+  loading: () => <div className="h-64" />,
+})
+
+const RelatedServices = dynamic(() => import("@/components/portfolio/related-services").then(m => ({ default: m.RelatedServices })), {
+  loading: () => <div className="h-80" />,
+})
+
+const TestimonialSlider = dynamic(() => import("@/components/portfolio/testimonial-slider").then(m => ({ default: m.TestimonialSlider })), {
+  loading: () => <div className="h-96" />,
+})
+
+const StatsCounter = dynamic(() => import("@/components/portfolio/stats-counter").then(m => ({ default: m.StatsCounter })), {
+  loading: () => <div className="h-64" />,
+})
 
 export default function PortfolioPage() {
   const [scrollProgress, setScrollProgress] = useState(0)
 
   useEffect(() => {
+    let lastUpdate = 0
+    const updateInterval = 16
+
     const handleScroll = () => {
-      const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
-      const scrolled = window.scrollY
-      setScrollProgress((scrolled / windowHeight) * 100)
+      const now = Date.now()
+      if (now - lastUpdate >= updateInterval) {
+        const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
+        const scrolled = window.scrollY
+        setScrollProgress((scrolled / windowHeight) * 100)
+        lastUpdate = now
+      }
     }
 
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
