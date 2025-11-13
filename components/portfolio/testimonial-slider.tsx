@@ -78,6 +78,8 @@ export function TestimonialSlider() {
                       src={testimonial.image || "/placeholder.svg"}
                       alt={testimonial.name}
                       className="w-16 h-16 rounded-full mx-auto mb-6 object-cover"
+                      loading="lazy"
+                      decoding="async"
                     />
 
                     {/* Quote */}
