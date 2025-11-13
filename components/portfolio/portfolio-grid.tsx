@@ -330,6 +330,8 @@ export function PortfolioGrid({ filter = "all" }: PortfolioGridProps) {
                   src={item.image || "/placeholder.svg"}
                   alt={item.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
                 />
 
                 {/* Dark Overlay */}
@@ -382,6 +384,8 @@ export function PortfolioGrid({ filter = "all" }: PortfolioGridProps) {
               src={selectedItem.image || "/placeholder.svg"}
               alt={selectedItem.title}
               className="w-full h-auto rounded-lg animate-fade-in-up"
+              loading="lazy"
+              decoding="async"
             />
 
             {/* Project Details */}
