@@ -14,11 +14,18 @@ export function Navbar() {
   const pathname = usePathname()
 
   useEffect(() => {
+    let lastCheck = 0
+    const checkInterval = 100
+
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
+      const now = Date.now()
+      if (now - lastCheck >= checkInterval) {
+        setIsScrolled(window.scrollY > 50)
+        lastCheck = now
+      }
     }
 
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
@@ -67,7 +74,6 @@ export function Navbar() {
               <li>
                 <Link
                   href="/"
-                  prefetch={false}
                   className={`transition-all duration-300 relative pb-2 ${
                     isActive("/")
                       ? "text-primary after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-gradient-to-r after:from-secondary after:to-accent after:rounded-full"
@@ -80,7 +86,6 @@ export function Navbar() {
               <li>
                 <Link
                   href="/about"
-                  prefetch={false}
                   className={`transition-all duration-300 relative pb-2 ${
                     isActive("/about")
                       ? "text-primary after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-gradient-to-r after:from-secondary after:to-accent after:rounded-full"
@@ -108,7 +113,6 @@ export function Navbar() {
                     <Link
                       key={service.href}
                       href={service.href}
-                      prefetch={false}
                       className="block px-5 py-2.5 text-primary/70 hover:text-primary hover:bg-secondary/10 transition-all duration-200 text-sm font-semibold"
                     >
                       {service.name}
@@ -120,7 +124,6 @@ export function Navbar() {
               <li>
                 <Link
                   href="/gallery"
-                  prefetch={false}
                   className={`transition-all duration-300 relative pb-2 ${
                     isActive("/gallery")
                       ? "text-primary after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-gradient-to-r after:from-secondary after:to-accent after:rounded-full"
@@ -133,7 +136,6 @@ export function Navbar() {
               <li>
                 <Link
                   href="/clients"
-                  prefetch={false}
                   className={`transition-all duration-300 relative pb-2 ${
                     isActive("/clients")
                       ? "text-primary after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-gradient-to-r after:from-secondary after:to-accent after:rounded-full"
@@ -146,7 +148,6 @@ export function Navbar() {
               <li>
                 <Link
                   href="/contact"
-                  prefetch={false}
                   className={`transition-all duration-300 relative pb-2 ${
                     isActive("/contact")
                       ? "text-primary after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-gradient-to-r after:from-secondary after:to-accent after:rounded-full"
@@ -181,10 +182,10 @@ export function Navbar() {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden pb-4 border-t border-primary/10 bg-white/90 backdrop-blur-lg">
-            <Link href="/" prefetch={false} className="block px-4 py-3 text-primary/70 hover:text-primary hover:bg-secondary/10 transition-colors text-sm font-semibold">
+            <Link href="/" className="block px-4 py-3 text-primary/70 hover:text-primary hover:bg-secondary/10 transition-colors text-sm font-semibold">
               Home
             </Link>
-            <Link href="/about" prefetch={false} className="block px-4 py-3 text-primary/70 hover:text-primary hover:bg-secondary/10 transition-colors text-sm font-semibold">
+            <Link href="/about" className="block px-4 py-3 text-primary/70 hover:text-primary hover:bg-secondary/10 transition-colors text-sm font-semibold">
               About
             </Link>
             <button
@@ -207,13 +208,13 @@ export function Navbar() {
                 ))}
               </div>
             )}
-            <Link href="/gallery" prefetch={false} className="block px-4 py-3 text-primary/70 hover:text-primary hover:bg-secondary/10 transition-colors text-sm font-semibold">
+            <Link href="/gallery" className="block px-4 py-3 text-primary/70 hover:text-primary hover:bg-secondary/10 transition-colors text-sm font-semibold">
               Portfolio
             </Link>
-            <Link href="/clients" prefetch={false} className="block px-4 py-3 text-primary/70 hover:text-primary hover:bg-secondary/10 transition-colors text-sm font-semibold">
+            <Link href="/clients" className="block px-4 py-3 text-primary/70 hover:text-primary hover:bg-secondary/10 transition-colors text-sm font-semibold">
               Our Clients
             </Link>
-            <Link href="/contact" prefetch={false} className="block px-4 py-3 text-primary/70 hover:text-primary hover:bg-secondary/10 transition-colors text-sm font-semibold">
+            <Link href="/contact" className="block px-4 py-3 text-primary/70 hover:text-primary hover:bg-secondary/10 transition-colors text-sm font-semibold">
               Contact
             </Link>
           </div>
