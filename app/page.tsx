@@ -1,28 +1,57 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import dynamic from "next/dynamic"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { HeroCarousel } from "@/components/home/hero-carousel"
-import { MissionStatement } from "@/components/home/mission-statement"
-import { TeamStatement } from "@/components/home/team-statement"
-import { StatsSection } from "@/components/home/stats-section"
-import { ClientLogos } from "@/components/home/client-logos"
-import { ProcessSection } from "@/components/home/process-section"
-import { CTASection } from "@/components/home/cta-section"
-import { ExpertPlanning } from "@/components/home/expert-planning"
+
+const MissionStatement = dynamic(() => import("@/components/home/mission-statement").then(m => ({ default: m.MissionStatement })), {
+  loading: () => <div className="h-96" />,
+})
+
+const TeamStatement = dynamic(() => import("@/components/home/team-statement").then(m => ({ default: m.TeamStatement })), {
+  loading: () => <div className="h-80" />,
+})
+
+const StatsSection = dynamic(() => import("@/components/home/stats-section").then(m => ({ default: m.StatsSection })), {
+  loading: () => <div className="h-96" />,
+})
+
+const ClientLogos = dynamic(() => import("@/components/home/client-logos").then(m => ({ default: m.ClientLogos })), {
+  loading: () => <div className="h-40" />,
+})
+
+const ProcessSection = dynamic(() => import("@/components/home/process-section").then(m => ({ default: m.ProcessSection })), {
+  loading: () => <div className="h-96" />,
+})
+
+const CTASection = dynamic(() => import("@/components/home/cta-section").then(m => ({ default: m.CTASection })), {
+  loading: () => <div className="h-64" />,
+})
+
+const ExpertPlanning = dynamic(() => import("@/components/home/expert-planning").then(m => ({ default: m.ExpertPlanning })), {
+  loading: () => <div className="h-96" />,
+})
 
 export default function Home() {
   const [scrollProgress, setScrollProgress] = useState(0)
 
   useEffect(() => {
+    let lastUpdate = 0
+    const updateInterval = 16
+
     const handleScroll = () => {
-      const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
-      const scrolled = window.scrollY
-      setScrollProgress((scrolled / windowHeight) * 100)
+      const now = Date.now()
+      if (now - lastUpdate >= updateInterval) {
+        const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
+        const scrolled = window.scrollY
+        setScrollProgress((scrolled / windowHeight) * 100)
+        lastUpdate = now
+      }
     }
 
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
