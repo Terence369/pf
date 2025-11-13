@@ -60,6 +60,8 @@ export function FeatureSpotlight() {
               src="/museum-gallery-visitors-viewing-exhibits.jpg"
               alt="Exhibition visitors"
               className="w-full h-auto object-cover animate-float"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </div>

@@ -42,6 +42,8 @@ export function TailoredExperience() {
               style={{
                 transform: isVisible ? "scale(1)" : "scale(1.1)",
               }}
+              loading="lazy"
+              decoding="async"
             />
           </div>
 
