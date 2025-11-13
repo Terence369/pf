@@ -10,12 +10,16 @@ const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
   variable: "--font-poppins",
+  display: "swap",
+  fallback: ["system-ui", "arial"],
 })
 
 const playfair = Playfair_Display({
   weight: ["400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
   variable: "--font-playfair",
+  display: "swap",
+  fallback: ["georgia", "serif"],
 })
 
 export const metadata: Metadata = {
