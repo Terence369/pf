@@ -128,7 +128,7 @@ export function StatsSection() {
         playsInline
         poster="/placeholder.svg?key=stats-bg"
       >
-        <source src="https://www.pexels.com/download/video/4916813/" type="video/mp4" />
+        <source src="https://cdn.builder.io/o/assets%2F7aa3b50cc2434a6ab4880d7d1f314d76%2F6a7233d44bb14ce7915e8da0836df881?alt=media&token=3cc56a6b-738d-4ee5-bd57-67938df78281&apiKey=7aa3b50cc2434a6ab4880d7d1f314d76" type="video/mp4" />
         {/* Fallback image */}
       </video>
 
