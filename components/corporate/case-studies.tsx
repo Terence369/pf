@@ -68,6 +68,8 @@ export function CaseStudies() {
                   src={study.image || "/placeholder.svg"}
                   alt={study.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
                   {study.type}
