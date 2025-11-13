@@ -19,7 +19,7 @@ export function MissionStatement() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Left Column - Image */}
           <div className="rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 h-96 lg:h-full min-h-96">
-            <img src="/mall-exhibition-hall-event-space.jpg" alt="Event space" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            <img src="/mall-exhibition-hall-event-space.jpg" alt="Event space" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
           </div>
 
           {/* Right Column - Text Blocks */}
