@@ -1,48 +1,24 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { FlowButton } from "@/components/ui/flow-button"
 
-const heroImages = ["/luxury-event-party-celebration.jpg", "/elegant-event-venue-decoration.jpg", "/premium-party-atmosphere.jpg"]
-
 export function HeroCarousel() {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
-
-  useEffect(() => {
-    // Preload images for better performance
-    heroImages.forEach((image) => {
-      const img = new Image()
-      img.src = image
-    })
-  }, [])
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length)
-    }, 5000)
-    return () => clearInterval(timer)
-  }, [])
-
   return (
     <section className="relative w-full h-screen flex items-center justify-center overflow-hidden pt-16">
-      {/* Background Image Carousel */}
-      <div className="absolute inset-0">
-        {heroImages.map((image, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentImageIndex ? "opacity-100" : "opacity-0"
-            }`}
-            style={{
-              backgroundImage: `url("${image}")`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          >
-            {/* Premium gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/50 to-black/40" />
-          </div>
-        ))}
+      {/* Background Video */}
+      <div className="absolute inset-0 w-full h-full">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="https://cdn.builder.io/o/assets%2F7aa3b50cc2434a6ab4880d7d1f314d76%2F8f406bc33aa44d57afbd64d16075de66?alt=media&token=30a95b2b-4bc2-46ef-8b1b-c866b24c1185&apiKey=7aa3b50cc2434a6ab4880d7d1f314d76" type="video/mp4" />
+        </video>
+        {/* Premium gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/50 to-black/40" />
       </div>
 
       {/* Content */}
