@@ -64,6 +64,8 @@ export function Navbar() {
               src="https://cdn.builder.io/api/v1/image/assets%2F6241002a28724d6b8f1149d981f5257e%2F4220e3e82a1f46b3b96e9daf8656a8a6?format=webp&width=800"
               alt="Pride Eventz Logo"
               className="h-10 w-10 object-contain"
+              loading="lazy"
+              decoding="async"
             />
             <span className="hidden sm:inline text-[17px] font-serif font-bold tracking-tight text-primary">Pride Eventz</span>
           </Link>
