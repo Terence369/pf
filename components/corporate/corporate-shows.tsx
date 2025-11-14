@@ -43,6 +43,8 @@ export function CorporateShows() {
                 src={slides[currentSlide] || "/placeholder.svg"}
                 alt="Corporate Show"
                 className="w-full h-96 object-cover"
+                loading="lazy"
+                decoding="async"
               />
 
               {/* Carousel Controls */}
