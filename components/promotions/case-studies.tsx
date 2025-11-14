@@ -62,6 +62,8 @@ export function CaseStudies() {
                   src={study.image || "/placeholder.svg"}
                   alt={study.title}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="p-6">
