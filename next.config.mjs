@@ -13,7 +13,6 @@ const nextConfig = {
   },
   compress: true,
   productionBrowserSourceMaps: false,
-  optimizeFonts: true,
   experimental: {
     optimizePackageImports: [
       '@radix-ui/react-dialog',
