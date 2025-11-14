@@ -579,6 +579,14 @@
     z-index: -10;
   }
 
+  /* Orange theme footer styling */
+  .footer-orange-theme {
+    background: linear-gradient(135deg, #C05800 0%, #D97706 50%, #EA8C55 100%);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(192, 88, 0, 0.3);
+  }
+
   /* Services page layout */
   /* Related services cards theme */
   .related-service-card {
