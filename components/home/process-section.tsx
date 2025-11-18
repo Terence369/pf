@@ -39,10 +39,10 @@ const howWeWork = [
 
 export function ProcessSection() {
   return (
-    <section className="bg-white">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground" style={{ marginRight: "auto", paddingLeft: "40px" }}>How we work?</h2>
+    <section className="bg-premium-gradient py-24 lg:py-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between mb-16 lg:mb-24">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground">How we work?</h2>
         </div>
         <Feature197 features={howWeWork} />
       </div>

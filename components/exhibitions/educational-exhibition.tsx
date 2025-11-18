@@ -35,6 +35,8 @@ export function EducationalExhibition() {
                 src="/modern-tech-exhibition-booth-blue-branding.jpg"
                 alt="Educational Exhibition"
                 className="w-full h-auto object-cover"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

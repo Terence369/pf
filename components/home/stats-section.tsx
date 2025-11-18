@@ -85,18 +85,18 @@ export function StatsSection() {
 
         <div className="relative z-10 max-w-7xl mx-auto">
           {/* Left side text */}
-          <div className="mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Our Legacy in the Making</h2>
-            <p className="text-lg text-white/80 max-w-2xl">
+          <div className="mb-16">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">Our Legacy in the Making</h2>
+            <p className="text-lg lg:text-xl text-white/80 max-w-2xl font-light">
               With years of experience and countless successful events, we've built a reputation for excellence and
               innovation in the event management industry.
             </p>
           </div>
 
           {/* Stats Grid - 2x2 */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
             {stats.map((stat, index) => (
-              <div key={stat.label} className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20">
+              <div key={stat.label} className="glass-morphism-gradient p-8 lg:p-10 rounded-2xl border border-white/20 group hover:border-white/40 transition-all duration-300">
                 <div style={{ display: "flex", flexDirection: "row" }}>
                   <div style={{ color: "oklch(0.6 0.2 30)", marginBottom: "8px", font: "700 60px/60px Inter, sans-serif" }}>
                     <div style={{ fontWeight: "700", marginRight: index === 0 ? "222px" : "-48px" }}>
@@ -128,7 +128,7 @@ export function StatsSection() {
         playsInline
         poster="/placeholder.svg?key=stats-bg"
       >
-        <source src="https://www.pexels.com/download/video/4916813/" type="video/mp4" />
+        <source src="https://cdn.builder.io/o/assets%2F7aa3b50cc2434a6ab4880d7d1f314d76%2F6a7233d44bb14ce7915e8da0836df881?alt=media&token=3cc56a6b-738d-4ee5-bd57-67938df78281&apiKey=7aa3b50cc2434a6ab4880d7d1f314d76" type="video/mp4" />
         {/* Fallback image */}
       </video>
 

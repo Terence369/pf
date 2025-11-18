@@ -76,6 +76,8 @@ export function GallerySection() {
                 src={image.src || "/placeholder.svg"}
                 alt={image.title}
                 className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
                 <ZoomIn className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -112,6 +114,8 @@ export function GallerySection() {
               src={selectedImage.src || "/placeholder.svg"}
               alt={selectedImage.title}
               className="w-full h-auto rounded-lg"
+              loading="lazy"
+              decoding="async"
             />
             <div className="mt-4 text-white">
               <h3 className="text-2xl font-bold">{selectedImage.title}</h3>

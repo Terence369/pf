@@ -69,6 +69,8 @@ export function RelatedServices() {
                   src={service.image || "/placeholder.svg"}
                   alt={service.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="p-6">

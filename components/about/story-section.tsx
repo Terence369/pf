@@ -38,6 +38,8 @@ export function StorySection() {
               className={`rounded-lg h-64 object-cover transition-all duration-700 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
+              loading="lazy"
+              decoding="async"
             />
             <img
               src="/placeholder.svg?key=team2"
@@ -45,6 +47,8 @@ export function StorySection() {
               className={`rounded-lg h-64 object-cover transition-all duration-700 delay-100 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
+              loading="lazy"
+              decoding="async"
             />
             <img
               src="/placeholder.svg?key=team3"
@@ -52,6 +56,8 @@ export function StorySection() {
               className={`rounded-lg h-64 object-cover transition-all duration-700 delay-200 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
+              loading="lazy"
+              decoding="async"
             />
             <img
               src="/placeholder.svg?key=team4"
@@ -59,6 +65,8 @@ export function StorySection() {
               className={`rounded-lg h-64 object-cover transition-all duration-700 delay-300 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
+              loading="lazy"
+              decoding="async"
             />
           </div>
 

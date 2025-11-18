@@ -1,30 +1,65 @@
 "use client"
 
+import dynamic from "next/dynamic"
 import { useEffect, useState } from "react"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { ClientsHero } from "@/components/clients/clients-hero"
-import { FeaturedClientsGrid } from "@/components/clients/featured-clients-grid"
-import { TestimonialsSection } from "@/components/clients/testimonials-section"
-import { ClientLogosCarousel } from "@/components/clients/client-logos-carousel"
-import { ImpactStatement } from "@/components/clients/impact-statement"
-import { StatsIndicators } from "@/components/clients/stats-indicators"
-import { IndustrySectors } from "@/components/clients/industry-sectors"
-import { ClientSuccessStories } from "@/components/clients/client-success-stories"
-import { PartnershipTiers } from "@/components/clients/partnership-tiers"
-import { ClientsCTA } from "@/components/clients/clients-cta"
+
+const FeaturedClientsGrid = dynamic(() => import("@/components/clients/featured-clients-grid").then(m => ({ default: m.FeaturedClientsGrid })), {
+  loading: () => <div className="h-96" />,
+})
+
+const TestimonialsSection = dynamic(() => import("@/components/clients/testimonials-section").then(m => ({ default: m.TestimonialsSection })), {
+  loading: () => <div className="h-96" />,
+})
+
+const ClientLogosCarousel = dynamic(() => import("@/components/clients/client-logos-carousel").then(m => ({ default: m.ClientLogosCarousel })), {
+  loading: () => <div className="h-64" />,
+})
+
+const ImpactStatement = dynamic(() => import("@/components/clients/impact-statement").then(m => ({ default: m.ImpactStatement })), {
+  loading: () => <div className="h-96" />,
+})
+
+const StatsIndicators = dynamic(() => import("@/components/clients/stats-indicators").then(m => ({ default: m.StatsIndicators })), {
+  loading: () => <div className="h-64" />,
+})
+
+const IndustrySectors = dynamic(() => import("@/components/clients/industry-sectors").then(m => ({ default: m.IndustrySectors })), {
+  loading: () => <div className="h-96" />,
+})
+
+const ClientSuccessStories = dynamic(() => import("@/components/clients/client-success-stories").then(m => ({ default: m.ClientSuccessStories })), {
+  loading: () => <div className="h-96" />,
+})
+
+const PartnershipTiers = dynamic(() => import("@/components/clients/partnership-tiers").then(m => ({ default: m.PartnershipTiers })), {
+  loading: () => <div className="h-80" />,
+})
+
+const ClientsCTA = dynamic(() => import("@/components/clients/clients-cta").then(m => ({ default: m.ClientsCTA })), {
+  loading: () => <div className="h-64" />,
+})
 
 export default function ClientsPage() {
   const [scrollProgress, setScrollProgress] = useState(0)
 
   useEffect(() => {
+    let lastUpdate = 0
+    const updateInterval = 16
+
     const handleScroll = () => {
-      const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
-      const scrolled = window.scrollY
-      setScrollProgress((scrolled / windowHeight) * 100)
+      const now = Date.now()
+      if (now - lastUpdate >= updateInterval) {
+        const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
+        const scrolled = window.scrollY
+        setScrollProgress((scrolled / windowHeight) * 100)
+        lastUpdate = now
+      }
     }
 
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 

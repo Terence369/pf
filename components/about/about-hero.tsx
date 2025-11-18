@@ -21,21 +21,6 @@ export function AboutHero() {
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
           Crafting unforgettable events with creativity and style.
         </h1>
-
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-12">
-          <div className="text-white text-center">
-            <div className="text-2xl font-bold">📍</div>
-            <p className="text-sm font-semibold">Based in Kerala</p>
-          </div>
-          <div className="text-white text-center">
-            <div className="text-2xl font-bold">🎯</div>
-            <p className="text-sm font-semibold">Established in 2010</p>
-          </div>
-          <div className="text-white text-center">
-            <div className="text-2xl font-bold">🎉</div>
-            <p className="text-sm font-semibold">200+ Projects Done</p>
-          </div>
-        </div>
       </div>
     </section>
   )

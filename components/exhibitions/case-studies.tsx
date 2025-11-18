@@ -62,7 +62,7 @@ export function CaseStudies() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
                 {/* Image */}
                 <div className="rounded-lg overflow-hidden">
-                  <img src={study.image || "/placeholder.svg"} alt={study.title} className="w-full h-64 object-cover" />
+                  <img src={study.image || "/placeholder.svg"} alt={study.title} className="w-full h-64 object-cover" loading="lazy" decoding="async" />
                 </div>
 
                 {/* Content */}

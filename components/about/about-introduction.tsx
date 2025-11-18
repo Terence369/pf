@@ -40,6 +40,8 @@ export function AboutIntroduction() {
                   isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
                 }`}
                 style={{ transform: isVisible ? "rotate(-5deg)" : "rotate(-5deg) translateX(-32px)" }}
+                loading="lazy"
+                decoding="async"
               />
               <img
                 src="/corporate-event-exhibition.jpg"
@@ -48,6 +50,8 @@ export function AboutIntroduction() {
                   isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
                 }`}
                 style={{ transform: isVisible ? "rotate(5deg)" : "rotate(5deg) translateX(32px)" }}
+                loading="lazy"
+                decoding="async"
               />
               <img
                 src="/luxury-event-party-celebration.jpg"
@@ -56,6 +60,8 @@ export function AboutIntroduction() {
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
                 style={{ transform: isVisible ? "rotate(-3deg)" : "rotate(-3deg) translateY(32px)" }}
+                loading="lazy"
+                decoding="async"
               />
               <img
                 src="/elegant-event-venue-decoration.jpg"
@@ -70,6 +76,8 @@ export function AboutIntroduction() {
                   left: "259px",
                   transform: isVisible ? "rotate(4deg)" : "rotate(4deg) translateY(-32px)"
                 }}
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

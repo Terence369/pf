@@ -92,7 +92,7 @@ export function FeaturedClientsGrid() {
             >
               {/* Logo */}
               <div className="client-logo mb-6">
-                <img src={client.logo} alt={`${client.name} logo`} className="w-40 h-auto mx-auto object-contain" />
+                <img src={client.logo} alt={`${client.name} logo`} className="w-40 h-auto mx-auto object-contain" loading="lazy" decoding="async" />
               </div>
 
               {/* Content wrapper to constrain text width and align left like reference */}

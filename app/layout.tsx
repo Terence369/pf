@@ -1,12 +1,26 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Poppins, Playfair_Display } from "next/font/google"
 import Script from "next/script"
 import { Analytics } from "@vercel/analytics/next"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"] })
+const poppins = Poppins({
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+  variable: "--font-poppins",
+  display: "swap",
+  fallback: ["system-ui", "arial"],
+})
+
+const playfair = Playfair_Display({
+  weight: ["400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+  fallback: ["georgia", "serif"],
+})
 
 export const metadata: Metadata = {
   title: "Pride Eventz - Luxury Event Management",
@@ -20,8 +34,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} font-sans antialiased`}>
+    <html lang="en" suppressHydrationWarning style={{ colorScheme: "light dark" }}>
+      <body className={`${poppins.variable} ${playfair.variable} font-sans antialiased`}>
         <Script id="safe-fetch" strategy="beforeInteractive">{`(function(){try{ // preserve original fetch
   var originalFetch = window.fetch;
   if(!originalFetch) return;

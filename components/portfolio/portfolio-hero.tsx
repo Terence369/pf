@@ -11,13 +11,17 @@ export function PortfolioHero() {
 
   return (
     <section className="relative w-full h-screen flex items-center justify-center overflow-hidden pt-16">
-      {/* Background Image with Gradient Overlay */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: 'url("/luxury-event-party-concert-pink-purple-lighting-cr.jpg")',
-        }}
-      />
+      {/* Background Video */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover"
+        autoPlay
+        muted
+        loop
+        playsInline
+      >
+        <source src="https://cdn.builder.io/o/assets%2F7aa3b50cc2434a6ab4880d7d1f314d76%2Fedef8be313bc478ca560363dd840507e?alt=media&token=5ad26086-72b5-4f23-9622-083c5c45b4d4&apiKey=7aa3b50cc2434a6ab4880d7d1f314d76" type="video/mp4" />
+      </video>
+
       {/* Gradient Overlay - Pink to White */}
       <div className="absolute inset-0 bg-gradient-to-b from-pink-500/60 via-pink-300/40 to-white/60" />
 
